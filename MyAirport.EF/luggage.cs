@@ -7,8 +7,10 @@ namespace ZW.MyAirport.EF
 {
     public class Luggage
     {
+        public Luggage() { }
+        
         public int LUGGAGEID { get; set; }
-        public int FLIGHTID { get; set; }
+        public int? FLIGHTID { get; set; }
         [ForeignKey("FLIGHTID")]
         public Flight FLIGHT { get; set; } //jointure entre le bagage et le vol par le FLIGHTID
         public string CODE_IATA { get; set; }

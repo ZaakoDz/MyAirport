@@ -7,6 +7,12 @@ namespace ZW.MyAirport.EF
 
     public class Flight
     {
+       
+
+        public Flight()
+        {
+            this.Luggages = new HashSet<Luggage>();  //**
+        }
         public int FLIGHTID { get; set; }
         public  int CIE { get; set; }
         public string LIG { get; set; }
@@ -16,5 +22,7 @@ namespace ZW.MyAirport.EF
         public string IMM { get; set; }
         public int PAX { get; set; }
         public string DES { get; set; }
+        public virtual ICollection<Luggage> Luggages { get; set; } //**affecter baggage à vol
+
     }
 }

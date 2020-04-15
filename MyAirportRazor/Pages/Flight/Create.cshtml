@@ -1,0 +1,69 @@
+﻿@page
+@model MyAirportRazor.CreateModelFlight
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Flight</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Flight.CIE" class="control-label"></label>
+                <input asp-for="Flight.CIE" class="form-control" />
+                <span asp-validation-for="Flight.CIE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Flight.LIG" class="control-label"></label>
+                <input asp-for="Flight.LIG" class="form-control" />
+                <span asp-validation-for="Flight.LIG" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Flight.JEX" class="control-label"></label>
+                <input asp-for="Flight.JEX" class="form-control" />
+                <span asp-validation-for="Flight.JEX" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Flight.DHC" class="control-label"></label>
+                <input asp-for="Flight.DHC" class="form-control" />
+                <span asp-validation-for="Flight.DHC" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Flight.PKG" class="control-label"></label>
+                <input asp-for="Flight.PKG" class="form-control" />
+                <span asp-validation-for="Flight.PKG" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Flight.IMM" class="control-label"></label>
+                <input asp-for="Flight.IMM" class="form-control" />
+                <span asp-validation-for="Flight.IMM" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Flight.PAX" class="control-label"></label>
+                <input asp-for="Flight.PAX" class="form-control" />
+                <span asp-validation-for="Flight.PAX" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Flight.DES" class="control-label"></label>
+                <input asp-for="Flight.DES" class="form-control" />
+                <span asp-validation-for="Flight.DES" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
