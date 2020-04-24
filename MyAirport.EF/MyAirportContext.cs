@@ -15,6 +15,10 @@ namespace ZW.MyAirport.EF
             builder.AddConsole();
         });
 
+        public MyAirportContext()
+        {
+        }
+
         public MyAirportContext(DbContextOptions<MyAirportContext> options)
             : base(options)
         {

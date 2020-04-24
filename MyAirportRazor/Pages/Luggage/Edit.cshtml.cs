@@ -36,8 +36,16 @@ namespace MyAirportRazor
             {
                 return NotFound();
             }
-           ViewData["FLIGHTID"] = new SelectList(_context.Flights, "FLIGHTID", "FLIGHTID");
-            return Page();
+
+            var flights = _context.Flights
+                .Select(f => new
+                {
+                    f.FLIGHTID,
+                    Description = $"{f.CIE} {f.LIG} : {f.DHC.ToShortDateString()}"
+                }).ToList();    
+           ViewData["FLIGHTID"] = LuggagesHelper.ListFlightInfo(_context); //on utilise LuggageHelper pour avoir les infos sur les vols
+
+            return Page();  
         }
 
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for

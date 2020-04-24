@@ -17,10 +17,11 @@ namespace MyAirportRazor
         {
             _context = context;
         }
-
+        
         public IActionResult OnGet()
         {
-        ViewData["FLIGHTID"] = new SelectList(_context.Flights, "FLIGHTID", "FLIGHTID");
+            ViewData["FLIGHTID"] = LuggagesHelper.ListFlightInfo(_context); //on utilise LuggageHelper pour avoir les infos sur les vols
+
             return Page();
         }
 
@@ -41,5 +42,7 @@ namespace MyAirportRazor
 
             return RedirectToPage("./Index");
         }
+
+        
     }
 }

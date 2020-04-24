@@ -47,7 +47,7 @@
 @foreach (var item in Model.Luggage) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.FLIGHT.FLIGHTID)
+                @Html.DisplayFor(modelItem => item.FLIGHT.CIE) @Html.DisplayFor(modelItem => item.FLIGHT.LIG) @Html.DisplayFor(modelItem => item.FLIGHT.DHC)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.CODE_IATA)

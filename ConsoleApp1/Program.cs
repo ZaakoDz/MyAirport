@@ -18,9 +18,10 @@ namespace ZW.MyAirport
 
                 {
                     CIE = 1,
-                    LIG = "knjfe",
+                    LIG = "AIRFRANCE",
                     JEX = 12,
-                    DES="Kouba"
+                    DES="Londres",
+                    DHC = Convert.ToDateTime("24/02/2020 15:01")
                 };
                 db.Add(f1);
                
@@ -28,9 +29,10 @@ namespace ZW.MyAirport
 
                 {
                     CIE = 2,
-                    LIG = "abcd",
+                    LIG = "AIGLEAZUR",
                     JEX = 13,
-                    DES="Paris"
+                    DES="Paris",
+                    DHC= Convert.ToDateTime("24/02/2020 15:01")
                 };
 
                 db.Add(f2);
@@ -39,9 +41,11 @@ namespace ZW.MyAirport
 
                 Luggage l1 = new Luggage
                 {
-                    CODE_IATA="sciroc",
+                    CODE_IATA="123456789",
                     DATE_CREATION= Convert.ToDateTime("24/02/2020 15:01"),
-                    DESTINATION = "Paris"                  
+                    DESTINATION = "Paris"
+
+                    
                 };
 
                 db.Add(l1);
